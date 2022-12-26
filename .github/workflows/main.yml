@@ -13,7 +13,7 @@ jobs:
         with:
             node-version: 16
        - name: Install Dependencies
-        run: |
+          run: |
             npm install
       - name: build_and_deploy
         uses: shalzz/zola-deploy-action@v0.16.1
