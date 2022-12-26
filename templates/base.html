@@ -1,0 +1,46 @@
+{% import "macros/sidebar.html" as sidebar %}
+{% import "macros/header.html" as header %}
+
+<!DOCTYPE html>
+<html lang="en">
+<link href="{{ get_url(path='main.css') | safe }}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<head>
+    <meta charset="utf-8">
+    <title>MyBlog</title>
+</head>
+
+<body>
+    <div class="container-fluid vh-100 main-content">
+        <div class="row h-100">
+            {%- block sidebar -%}{%- endblock sidebar -%}
+            <div class="col mh-100 overflow-auto px-0">
+                {%- block header -%}{%- endblock header -%}
+
+                <div class="d-flex flex-column h-100 p-2">
+                    {%- block content -%} {%- endblock -%}
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    {{ sidebar::offcanvas_sidebar() }}
+
+
+
+    <script src="{{ get_url(path = 'assets/js/bootstrap/bootstrap.bundle.min.js') | safe }}"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+        const myModal = document.getElementById('searchModal');
+        const myInput = document.getElementById('searchInput');
+
+
+    </script>
+
+</body>
+
+</html>

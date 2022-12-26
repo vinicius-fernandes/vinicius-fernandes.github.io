@@ -1,0 +1,182 @@
+@import "colors.scss";
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf");
+  }
+
+  @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+  $sidebar-bg:                $oc-gray-9;
+  $header-bg: $oc-gray-9;
+  $sidebar-color:             $oc-gray-6;
+  $sidebar-title-color:       $oc-gray-7;
+  $sidebar-nav-icon-color:    $oc-gray-0;
+  $sidebar-nav-text-color:    $oc-gray-0;
+  $sidebar-social-color:      $oc-gray-6;
+  
+  $sidebar-bg-hover:           $oc-red-6;
+  $sidebar-color-hover:        $oc-gray-6;
+  $sidebar-nav-color-hover:    $oc-gray-6;
+  
+  
+  $primary:             $oc-blue-6;
+  $secondary:           $oc-gray-6;
+  $success:             $oc-green-9;
+  $info:                $oc-cyan-3;
+  $warning:             $oc-yellow-4;
+  $danger:              $oc-red-8;
+  $light:               $oc-gray-0;
+  $dark:                $oc-gray-8;
+
+
+ 
+
+body{
+  font-family: 'Roboto Mono', monospace;
+
+}
+a {
+    color: $oc-blue-8;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $oc-orange-8;
+    text-decoration: underline;
+}
+
+::selection {
+    color: white;
+    background: $oc-blue-5;
+}
+
+.main-content{
+  background-color: $oc-gray-8;
+  color: $oc-gray-0;
+}
+
+a {
+  color:$oc-gray-0;
+  font-weight: bold;
+}
+a:hover{
+  color:$oc-red-6;
+}
+
+.header{
+  background-color: $header-bg;
+  color:$oc-gray-0;
+}
+
+.post-card {
+  background-color: $sidebar-bg;
+  border-radius: 6px;
+  padding:15px;
+
+  a{
+    font-weight: bold;
+    text-decoration-line: underline ;
+    text-decoration-color: $oc-blue-3;
+  }
+  a:hover{
+    color:$oc-gray-0;
+    text-decoration: none;
+    background-color: $oc-red-6;
+  }
+}
+
+.sidebar {
+    color:               $sidebar-color;
+    background-color:    $sidebar-bg;
+
+    a {
+        color:    $sidebar-color;
+    }
+
+    a:hover {
+        color:    $sidebar-color-hover;
+    }
+
+  
+
+    .sidebar-avatar {
+        width: 96px;
+        height: 96px;
+        overflow: hidden;
+    
+        img:hover {
+            transform: scale(1.25);
+            transition: .5s;
+        }
+    }
+
+    .sidebar-title {
+        color: $sidebar-title-color;
+    }
+
+    .sidebar-nav {
+        background-color: $sidebar-bg;
+
+        .sidebar-nav-item {
+            font-weight: 500;
+            background-color: $sidebar-bg;
+        }
+
+        .sidebar-nav-item:hover {
+            background-color: $sidebar-bg-hover;
+        }
+
+        .sidebar-nav-icon {
+            color: $sidebar-nav-icon-color;
+        }
+
+        .sidebar-nav-text {
+            color: $sidebar-nav-text-color;
+        }
+    }
+
+    .sidebar-social {
+        a {
+            color: $sidebar-social-color;
+        }
+
+        a:hover {
+            color: $sidebar-color-hover;
+        }
+    }
+}
+
+.bg-sidebar {
+    background-color:    $sidebar-bg;
+}
+
+
+
+.navbar-bg-light {
+    background-color: rgba(white, 1);
+}
+
+.card-bg-light {
+    background-color: white;
+}
+
+
+.index-avatar {
+    width: 208px;
+    height: 208px;
+    overflow: hidden;
+
+    img:hover {
+        transform: scale(1.25);
+        transition: .5s;
+    }
+}
+
+.post-img {
+    overflow: hidden;
+}
+
+.btn-taxonomy {
+    background-color: $oc-gray-1;
+}
