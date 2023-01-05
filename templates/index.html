@@ -1,49 +1,51 @@
-
 {% extends "base.html" %}
 {% import "macros/utilities/images.html" as images %}
 {% import "macros/utilities/menus.html" as menus %}
 
 {%- block sidebar -%}
-  {{ sidebar::sidebar(type = "section") }}
+{{ sidebar::sidebar(type = "section") }}
 {%- endblock sidebar -%}
 
 {%- block header -%}
-  {{ header::header(page = section, type = "section") }}
+{{ header::header(page = section, type = "section") }}
 {%- endblock header -%}
 
 {%- block content -%}
 <main class="container">
-    <div class="row justify-content-center mt-5 mb-3">
-        <div class="col-auto">
-          <div class="index-avatar border border-3 rounded-circle">
-            {{ images::get_avatar() }}
-          </div>
-        </div>
+  <div class="row justify-content-center mt-5 mb-3">
+    <div class="col-auto mt-2">
+      <div class="index-avatar  rounded-circle">
+        {{ images::get_avatar() }}
       </div>
-
-      <div class="row justify-content-center mb-5">
-        <div class="col-11 col-sm-8 col-md-7 col-xl-6 text-center">  
-          <div class="mb-1">
-              <a
-                href="{{ config.extra.social.author_link | safe }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-decoration-none"
-              >
-                  <h1 class="fs-3">{{ config.title | safe }}</h1>
-              </a>
-          </div>
-    
-          <div class="row justify-content-center mb-5">
-            <div class="col-11 col-lg-10 col-xxl-9">
-              {{ section.content | safe }}
-            </div>
-          </div>
-          <div class="row justify-content-center fs-4">
-            {{ menus::social_links() }}
-          </div>
-        </div>
+    </div>
+    <div class="col-12 col-md-6 mt-2 ">
+      <h1 class="text-center"> {{section.extra.description_title | safe}}</h1>
+      <p>{{section.description | safe}} </p>
+      <div class="row justify-content-center fs-4">
+        {{ menus::social_links() }}
       </div>
+    </div>
+  </div>
 
+  
+  <div class="row  justify-content-center mx-auto text-center">
+    <div class="col-12">
+      <h1>My tech stack</h1>
+    </div>
+    <div class="col-12 col-md-4 border rounded m-1 p-1 ">
+    Java, Javascript, C#, HTML, CSS
+    </div>
+    <div class="col-12 col-md-4 border rounded m-1 p-1">
+      Angular, Springboot, .Net Core
+    </div>
+    <div class="col-12 col-md-4 border rounded m-1 p-1">
+      MySql, SqlServer, PostgreSQL
+    </div>
+    <div class="col-12 col-md-4 border rounded m-1 p-1">
+      Docker, AWS, Azure
+    </div>
+  </div>
+
+  </div>
 </main>
 {%- endblock content -%}
