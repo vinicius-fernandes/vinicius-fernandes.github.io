@@ -44,6 +44,16 @@ color:$oc-blue-8
 
 }
 
+.pageContent{
+    max-width: 70vw;
+}
+
+@media only screen and (max-width: 992px) {
+    .pageContent{
+        max-width: 97vw;
+    }
+  }
+
 
 body{
   font-family: 'Roboto Mono', monospace;

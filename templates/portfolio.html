@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+{%- block sidebar -%}
+  {{ sidebar::sidebar(type = "page") }}
+{%- endblock sidebar -%}
+
+{%- block header -%}
+  {{ header::header(page = section, type = "section") }}
+{%- endblock header -%}
+
+{% block content %}
+
+  <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->  
+  {% for page in section.pages %}
+    <div class="post-card">
+        <div class="row">
+            <div class="col-12 col-md-3 text-center">
+                <img src="{{page.extra.thumbnail | safe}}" class="img-thumbnail"/>
+        
+    </div>
+    <div class="col-12   col-md-7">
+        <h1> <a href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
+        <p class="subtitle">{{page.date | safe}}</p>
+        <p>{{page.extra.description | safe}}</p>
+    </div>
+        </div>
+    </div>
+
+  {% endfor %}
+{% endblock content %}

@@ -21,7 +21,8 @@ avatar = "images/profile.jpg"
     nav = [
         {name = "Home", url="@/_index.md", icon = "bi-house"},
         { name = "Stack", url = "@/stack/_index.md", icon = "bi-code-slash" },
-        { name = "Blog", url = "@/blog/_index.md", icon = "bi-file-earmark-text" }
+        { name = "Blog", url = "@/blog/_index.md", icon = "bi-file-earmark-text" },
+        { name = "Portfolio", url = "@/portfolio/_index.md", icon = "bi-briefcase-fill" },
 
     ]
 
@@ -40,7 +41,7 @@ avatar = "images/profile.jpg"
 
     
 [extra.social]
-        author_link = "https://author-url.com/"
+        author_link = "https://www.linkedin.com/in/vinicius-afernandes/"
         twitter = "@user"
         links = [
             { name = "Email", url = "mailto:viniciusnandes@hotmail.com", icon = "bi-envelope-fill" },

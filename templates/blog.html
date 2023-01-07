@@ -13,10 +13,19 @@
 
   <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->  
   {% for page in section.pages %}
-    <div class="post-card">
-        <h1> <a href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
-        <p>{{page.date | safe}}</p>
+  <div class="post-card">
+    <div class="row">
+        <div class="col-12 col-md-3 text-center">
+            <img src="{{page.extra.thumbnail | safe}}" class="img-thumbnail" />
+    
+</div>
+<div class="col-12   col-md-7">
+    <h1> <a href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
+    <p class="subtitle">{{page.date | safe}}</p>
+    <p>{{page.extra.description | safe}}</p>
+</div>
     </div>
+</div>
 
   {% endfor %}
 {% endblock content %}
