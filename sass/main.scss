@@ -41,7 +41,11 @@ color:$oc-blue-8
 .stack-card{
     background-color: $sidebar-bg;
     border:1px solid $oc-gray-7;
-
+    i:hover {
+        font-size:5.5em;
+        color:$oc-blue-1;
+        transition: .8s;
+    }
 }
 
 .pageContent{
