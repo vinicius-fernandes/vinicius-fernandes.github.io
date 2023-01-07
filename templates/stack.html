@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import "macros/utilities/images.html" as images %}
+{% import "macros/utilities/menus.html" as menus %}
+
+{%- block sidebar -%}
+{{ sidebar::sidebar(type = "section") }}
+{%- endblock sidebar -%}
+
+{%- block header -%}
+{{ header::header(page = section, type = "section") }}
+{%- endblock header -%}
+
+{%- block content -%}
+<main class="container heightHome align-items-center" >
+
+
+  
+  <div class="row  justify-content-center mx-auto align-items-center h-100  text-center">
+    <div class="col-12">
+      <h1>My tech stack</h1>
+    </div>
+    {%- for item in config.extra.stack.items -%}
+
+    <div class="col-12 col-md-3 stack-card rounded  m-1 p-4 ">
+     <i class="{{ item.icon | safe }} stack-icon-size text-center" ></i>
+    </div>
+{%- endfor -%}
+  </div> 
+
+  </div>
+</main>
+{%- endblock content -%}

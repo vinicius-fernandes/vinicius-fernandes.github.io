@@ -3,7 +3,7 @@
 
 {%- macro sidebar_nav(type) -%}
 {%- if type == "page" -%}
-{%- set nav_icon_class = "d-none" -%}
+{%- set nav_icon_class = "d-none d-xl-inline" -%}
 {%- set nav_text_class = "d-none d-md-inline" -%}
 {%- else -%}
 {%- set nav_icon_class = "d-none d-xl-inline" -%}
@@ -27,7 +27,7 @@
 {%- endmacro sidebar_nav -%}
 
 {%- macro offcanvas_sidebar_nav() -%}
-  <div class="sidebar-nav list-group my-auto rounded-0 text-start">
+  <div class="sidebar-nav list-group my-auto rounded-0 text-center">
     {%- for item in config.extra.menus.nav -%}
       <a
         href="{{ standard::get_url_on_location(path = item.url) }}"

@@ -3,7 +3,7 @@
 
 {%- macro header(page, type) -%}
   <nav
-    class="navbar navbar-expand header sticky-top border-bottom"
+    class="navbar navbar-expand header sticky-top "
   >
     <div class="container-fluid">
       {%- if type == "page" -%}
@@ -13,11 +13,11 @@
       {%- endif -%}
       <button
         type="button"
-        class="btn {{ offcanvas_btn_class | safe }} fs-5"
+        class="btn {{ offcanvas_btn_class | safe }} fs-5 border "
         data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
         aria-controls="offcanvas"
       >
-        <span class="bi bi-list text-white"></span>
+        <span class="bi bi-list text-white "></span>
       </button>
       
       <div class="col-8">

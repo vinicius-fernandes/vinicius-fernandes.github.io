@@ -11,8 +11,8 @@
 {%- endblock header -%}
 
 {%- block content -%}
-<main class="container">
-  <div class="row justify-content-center mt-5 mb-3">
+<main class="container heightHome align-items-center" >
+  <div class="row justify-content-center  align-items-center h-100 ">
     <div class="col-auto mt-2">
       <div class="index-avatar  rounded-circle">
         {{ images::get_avatar() }}
@@ -20,7 +20,7 @@
     </div>
     <div class="col-12 col-md-6 mt-2 ">
       <h1 class="text-center"> {{section.extra.description_title | safe}}</h1>
-      <p>{{section.description | safe}} </p>
+      <p class="text-center">{{section.description | safe}} </p>
       <div class="row justify-content-center fs-4">
         {{ menus::social_links() }}
       </div>
@@ -28,7 +28,7 @@
   </div>
 
   
-  <div class="row  justify-content-center mx-auto text-center">
+  <!-- <div class="row  justify-content-center mx-auto text-center">
     <div class="col-12">
       <h1>My tech stack</h1>
     </div>
@@ -44,7 +44,7 @@
     <div class="col-12 col-md-4 border rounded m-1 p-1">
       Docker, AWS, Azure
     </div>
-  </div>
+  </div> -->
 
   </div>
 </main>

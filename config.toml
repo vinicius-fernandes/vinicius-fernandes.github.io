@@ -20,10 +20,23 @@ avatar = "images/profile.jpg"
 [extra.menus]
     nav = [
         {name = "Home", url="@/_index.md", icon = "bi-house"},
-        { name = "Blog", url = "@/blog/_index.md", icon = "bi-file-earmark-text" },
+        { name = "Stack", url = "@/stack/_index.md", icon = "bi-code-slash" },
+        { name = "Blog", url = "@/blog/_index.md", icon = "bi-file-earmark-text" }
 
     ]
 
+[extra.stack]
+    items = [
+        {icon="devicon-java-plain-wordmark"},
+        {icon="devicon-javascript-plain"},
+        {icon="devicon-csharp-plain-wordmark"},
+        {icon="devicon-html5-plain-wordmark"},
+        {icon="devicon-css3-plain-wordmark"},
+        {icon="devicon-spring-plain-wordmark"},
+        {icon="devicon-angularjs-plain"},
+        {icon="devicon-docker-plain-wordmark"},
+        
+    ]
 
     
 [extra.social]

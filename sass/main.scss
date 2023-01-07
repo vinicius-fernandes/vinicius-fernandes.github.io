@@ -7,7 +7,7 @@
 
   @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-  $sidebar-bg:                $oc-gray-9;
+  $sidebar-bg:                $oc-gray-8;
   $header-bg: $oc-gray-9;
   $sidebar-color:             $oc-gray-6;
   $sidebar-title-color:       $oc-gray-7;
@@ -15,7 +15,7 @@
   $sidebar-nav-text-color:    $oc-gray-0;
   $sidebar-social-color:      $oc-gray-6;
   
-  $sidebar-bg-hover:           $oc-red-6;
+  $sidebar-bg-hover:           $oc-blue-6;
   $sidebar-color-hover:        $oc-gray-6;
   $sidebar-nav-color-hover:    $oc-gray-6;
   
@@ -30,7 +30,20 @@
   $dark:                $oc-gray-8;
 
 
- 
+.stack-icon-size {
+font-size: 5em;
+color:$oc-blue-8
+}
+.stack-icon-size:hover {
+    font-size: 5em;
+    color:$oc-blue-8
+    }
+.stack-card{
+    background-color: $sidebar-bg;
+    border:1px solid $oc-gray-7;
+
+}
+
 
 body{
   font-family: 'Roboto Mono', monospace;
@@ -46,14 +59,23 @@ a:hover {
     text-decoration: underline;
 }
 
+.heightHome {
+    height: 85vh;
+}
+
 ::selection {
     color: white;
     background: $oc-blue-5;
 }
 
 .main-content{
-  background-color: $oc-gray-8;
+  background-color: $oc-gray-9;
   color: $oc-gray-0;
+}
+
+.important-text{
+    color:$oc-blue-8;
+    font-weight: bold;
 }
 
 a {
@@ -61,7 +83,7 @@ a {
   font-weight: bold;
 }
 a:hover{
-  color:$oc-red-6;
+  color:$oc-blue-6;
 }
 
 .header{
@@ -82,7 +104,7 @@ background-color: $sidebar-bg;
   a:hover{
     color:$oc-gray-0;
     text-decoration: none;
-    background-color: $oc-red-6;
+    background-color: $oc-blue-6;
   }
 }
 
