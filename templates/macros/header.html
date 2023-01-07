@@ -5,7 +5,7 @@
   <nav
     class="navbar navbar-expand header sticky-top "
   >
-    <div class="container-fluid">
+    <div class="container-fluid ">
       {%- if type == "page" -%}
         {%- set offcanvas_btn_class = "d-block d-lg-none text-white"  -%}
       {%- else -%}
@@ -20,7 +20,7 @@
         <span class="bi bi-list text-white "></span>
       </button>
       
-      <div class="col-8">
+      <div class="">
         {% if page == "null" %}
           {{ menus::simple_top_bar_nav(type = type) }}
         {% else %}

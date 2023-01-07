@@ -55,7 +55,7 @@
 
     {%- if page_ancestor -%}
       {%- set section = get_section(path = page_ancestor) -%}
-      <div class="col-auto d-none d-xl-block">
+      <div class="col-auto d-none d-md-block">
         <a
           href="{{ section.permalink | safe }}"
           class="text-decoration-none"
@@ -63,7 +63,7 @@
           {{ section.title | truncate(length=40) | safe }}
         </a>
       </div>
-      <div class="col-auto d-none d-xl-block">
+      <div class="col-auto d-none d-md-block">
         <span class="text-secondary">
           »
         </span>
