@@ -27,7 +27,12 @@
           {{ menus::top_bar_nav(page = page, type = type) }}
         {% endif %}
       </div>
-
+        <a onclick="switchLang('/pt')" id="ptLang" class="lang-item" data-bs-toggle="tooltip" data-bs-title="Mudar para português" data-bs-placement="left">
+          <h2>🇧🇷</h2>
+        </a>
+        <a onclick="switchLang('')" id="enLang" class="d-none lang-item" data-bs-toggle="tooltip" data-bs-title="Change to english" data-bs-placement="left"> 
+          <h2 >🇬🇧</h2>
+        </a>
     </div>
   </nav>
 {%- endmacro header -%}

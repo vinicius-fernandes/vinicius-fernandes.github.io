@@ -34,8 +34,10 @@
     {{ sidebar::offcanvas_sidebar() }}
 
 
+    <script src="{{ get_url(path = 'assets/js/lang.js') | safe }}"></script>
 
     <script src="{{ get_url(path = 'assets/js/bootstrap/bootstrap.bundle.min.js') | safe }}"></script>
+    
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));

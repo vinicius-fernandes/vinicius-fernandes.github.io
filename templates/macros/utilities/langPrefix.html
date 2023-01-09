@@ -1,0 +1,9 @@
+{%- macro get_lang_prefix(lang,url) -%}
+
+{%- if lang == "pt"-%}
+{%- set langPrefix = "/pt" -%}
+{%- else -%}
+{%- set langPrefix = "" -%}
+{% endif%}
+{{"@"}}{{langPrefix}}{{url}}
+{%- endmacro get_lang_prefix-%}

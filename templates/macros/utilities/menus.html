@@ -1,7 +1,10 @@
 {% import "macros/utilities/standard.html" as standard %}
 
+{% import "macros/utilities/langPrefix.html" as langPrefix %}
 
 {%- macro sidebar_nav(type) -%}
+
+
 {%- if type == "page" -%}
 {%- set nav_icon_class = "d-none d-xl-inline" -%}
 {%- set nav_text_class = "d-none d-md-inline" -%}
@@ -11,32 +14,42 @@
 {%- endif -%}
 
 <div class="sidebar-nav list-group my-auto rounded-0 text-center">
-    {%- for item in config.extra.menus.nav -%}
+
+
+    {%- for nav in config.extra.menus.nav -%}
+    {%- if nav.lang==lang -%}
+    {%- for item in nav.data -%}
       <a
-        href="{{ standard::get_url_on_location(path = item.url) }}"
+        href="{{ item.url }}"
         class="sidebar-nav-item list-group-item list-group-item-action border border-0"
         data-bs-toggle="tooltip" data-bs-title="{{ item.name | safe }}"
       >
         <span class="sidebar-nav-icon bi {{ item.icon | safe }} {{ nav_icon_class | safe }} fs-4"></span>
         <span class="sidebar-nav-text {{ nav_text_class | safe }}">
-          {{ item.name | safe }}
+          {{ item.name | safe }} 
         </span>
       </a>
+      {%- endfor -%}
+      {%- endif -%}
     {%- endfor -%}
   </div>
 {%- endmacro sidebar_nav -%}
 
 {%- macro offcanvas_sidebar_nav() -%}
   <div class="sidebar-nav list-group my-auto rounded-0 text-center">
-    {%- for item in config.extra.menus.nav -%}
+    {%- for nav in config.extra.menus.nav -%}
+    {%- if nav.lang==lang -%}
+    {%- for item in nav.data -%}
       <a
-        href="{{ standard::get_url_on_location(path = item.url) }}"
+        href="{{ item.url }}"
         class="sidebar-nav-item list-group-item list-group-item-action border border-0"
         data-bs-toggle="tooltip" data-bs-title="{{ item.name | safe }}"
       >
         <span class="sidebar-nav-icon bi {{ item.icon | safe }} ms-2 me-1 fs-4"></span>
-        <span class="sidebar-nav-text">{{ item.name | safe }}</span>
+        <span class="sidebar-nav-text">{{ item.name | safe }} </span>
       </a>
+      {%- endfor -%}
+      {%- endif -%}
     {%- endfor -%}
   </div>
 {%- endmacro offcanvas_sidebar_nav -%}
